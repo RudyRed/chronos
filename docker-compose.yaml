@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+  aggregator:
+    build: ./aggregator
+    depends_on:
+      - isodate-service
+      - utcdate-service
+    ports:
+      - "8080:8080"
+  isodate-service:
+    build: ./isodate-service
+    ports:
+      - "3000:3000"
+  utcdate-service:
+    build: ./utcdate-service
+    ports:
+      - "3001:3001"
