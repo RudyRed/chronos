@@ -11,6 +11,7 @@ spec:
     spec:
       containers:
       - name: utcdate-service
-        image: eu.gcr.io/kubernautsio/utcdate-service:latest
+        image: chronos_utcdate-service
+        imagePullPolicy: Never
         ports:
         - containerPort: 3001

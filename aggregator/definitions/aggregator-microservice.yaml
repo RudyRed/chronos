@@ -11,6 +11,7 @@ spec:
     spec:
       containers:
       - name: aggregator-service
-        image: eu.gcr.io/kubernautsio/aggregator:latest
+        image: chronos_aggregator
+        imagePullPolicy: Never
         ports:
         - containerPort: 8080
